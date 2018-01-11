@@ -96,7 +96,7 @@ async function run(
   }
   const analysis = warnings.analysis;
 
-  const filtered = warnings.filter((w) => !filter.shouldIgnore(w));
+  const filtered = warnings.warnings.filter((w) => !filter.shouldIgnore(w));
 
   if (options.fix) {
     const changedFiles = await fix(

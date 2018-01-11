@@ -30,9 +30,9 @@ export async function analyze(
 
   if (inputs == null || inputs.length === 0) {
     const _package = await analyzer.analyzePackage();
-    return generateAnalysis(_package, '', isNotTest);
+    return generateAnalysis(_package, new PackageUrlResolver(), isNotTest);
   } else {
     const analysis = await analyzer.analyze(inputs);
-    return generateAnalysis(analysis, '', isNotTest);
+    return generateAnalysis(analysis, new PackageUrlResolver(), isNotTest);
   }
 }
