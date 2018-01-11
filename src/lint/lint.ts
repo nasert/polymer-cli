@@ -320,8 +320,9 @@ async function fix(
       await applyEdits(edits, makeParseLoader(analyzer, analysis));
 
   for (const [newPath, newContents] of editedFiles) {
+    const filePath = newPath.replace('file://', '').replace(config.root, '');
     await fs.writeFile(
-        path.join(config.root, newPath), newContents, {encoding: 'utf8'});
+        path.join(config.root, filePath), newContents, {encoding: 'utf8'});
   }
 
   const appliedChangeCountByFile = countEditsByFile(appliedEdits);
