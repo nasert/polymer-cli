@@ -65,7 +65,7 @@
     "merge-stream": "^1.0.1",
     "mz": "^2.6.0",
     "plylog": "^0.4.0",
-    "polymer-analyzer": "^2.6.0",
+    "polymer-analyzer": "^3.0.0-pre.6",
     "polymer-build": "^2.1.0",
     "polymer-linter": "^2.2.0",
     "polymer-project-config": "^3.4.0",
